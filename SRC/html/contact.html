@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact-page</title>
+    <link rel="stylesheet" href="/SRC/styles/headerstyle.css">
+</head>
+<body>
+    <!-- Top Nav-bar -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="/index.html"><img src="/public/images/RP-logo.png" alt="Result Portal Logo" class="logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/SRC/html/login/studentlogin.html">Login</a></li>
+            <li class="active"><a href="/SRC/html/contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Us Form -->
+     <section class="contact-outer-background">
+        <div class="form-background">
+            <div class="wrapper">
+                <div class="contact-form-heading">
+                    <h3>Contact Us</h3>
+                </div>
+                <form class="contact-inputs">
+                    <div class="contact-row">
+                        <div class="contact-column">
+                            <label for="firstname">First Name</label>
+                            <input type="text" name="firstname" required>
+                        </div>
+                        <div class="contact-column">
+                            <label for="firstname">Last Name</label>
+                            <input type="text" name="lastname" required>
+                        </div>
+                    </div>
+                    <div class="contact-row">
+                        <div class="contact-column">
+                            <label for="e-mail">E-mail</label>
+                            <input type="email" name="e-mail" required>
+                        </div>
+                        <div class="contact-column">
+                            <label for="phone">Phone</label>
+                            <input type="tel" name="firstname" required>
+                        </div>
+                    </div>  
+                    <div class="contact-message-row">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message"></textarea>
+                    </div>   
+                    <div class="contact-submit-btn">
+                        <input type="submit" value="Submit">
+                    </div>               
+                </form>                
+            </div>
+        </div>
+     </section>
+</body>
+</html>

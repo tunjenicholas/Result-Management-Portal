@@ -3,24 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <title>student-dashboard</title>
-    <link rel="stylesheet" href="/SRC/styles/headerstyle.css">
+    <link rel="stylesheet" href="/SRC/styles/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header class="header-section">
-
-        <nav class="navbar">
-            <div class="logo-container">
-                <a href="/index.html"><img src="/public/images/RP-logo.png" alt="Result Portal Logo" class="logo"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="/index.html"><i class="fas fa-home icon"></i> Home</a></li>
-                <li><a href="/result.html"><i class="fas fa-file-alt icon"></i>Results</a></li>
-                <li><a href="/login.html"><i class="fas fa-sign-in-alt icon"></i>Login</a></li>
-                <li><a href="/register.html"><i class="fas fa-user-plus icon"></i>Register</a></li>
-                <li><a href="/contact.html"><i class="fas fa-envelope icon"></i> Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>    
+    <!-- Student Dashboard -->
+<Section class="dashboard-container">
+    <!-- Dashboard Side-Bar nav -->
+    <aside class="dashboard-sidebar-container">
+        <div class="dashboard-heading">
+            <h2>Student Dashboard</h2>
+        </div>
+        <ul class="sidebar-items">
+            <li><a href="/SRC/html/result.html"><i class="fa-solid fa-square-poll-horizontal icon"></i>View Results</a></li>
+            <li><a href=""><i class="fa-solid fa-file-arrow-down icon"></i>Download Result Slip</a></li>
+            <li><a href=""><i class="fa-solid fa-print icon"></i>Print</a></li>
+            <li><a href=""><i class="fa-solid fa-clock-rotate-left icon"></i>View Academic History</a></li>
+            <li><a href=""><i class="fa-solid fa-bell icon"></i>Notification</a></li>
+            <!-- <li><a href=""><i class="fa-solid fa-gear icon"></i>Profile Management</a></li> -->
+        </ul>        
+    </aside>
+    <!-- main content -->
+    <section class="dashboard-main-content">
+        <div class="profile">
+            <p class="toggle-btn"><i class="fa-solid fa-list-ul"></i></p>
+            <p class="profile-pic"><i class="fa-solid fa-user"></i></p>
+        </div>
+        <div class="welcome-message">
+            <h2>Personal Information</h2>
+            <p class="user-welcome-message">
+                Welcome, Nicholas.
+            </p>
+        </div>
+        <div class="main-content">
+            <table>
+                <tr>
+                    <th>Full Name: </th>
+                    <td>Nicholas Tunje</td>
+                </tr>
+                <tr>
+                    <th>Adm No: </th>
+                    <td>1234</td>
+                </tr>
+                <tr>
+                    <th>E-mail:</th>
+                    <td>nm.tunje@gmail.com</td>
+                </tr>
+                <tr>
+                    <th>Parent Phone No:</th>
+                    <td>0746779401</td>
+                </tr>
+                <tr>
+                    <th>Form:</th>
+                    <td>3 white</td>
+                </tr>
+                <tr>
+                    <th>Club:</th>
+                    <td>ICT club</td>
+                </tr>
+                <tr>
+                    <th>Dormitory Name:</th>
+                    <td>Kwame Nkrumah</td>
+                </tr>
+                <tr>
+                    <th>School Name:</th>
+                    <td>Zetech Secondary </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+</Section>
 
 </body>
 </html>

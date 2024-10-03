@@ -6,9 +6,55 @@ body {
     box-sizing: border-box;
 }
 
-/* Header Section */
-.header-section {
-    position: relative;
+/* Nav-bar at the top */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(#5885e4, #2a4395);
+    /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/public/images/white-cloud-blue-sky-sea.jpg) no-repeat center center/cover; */
+    width: 100%;
+    z-index: 1;
+    height: 50px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 12px;
+    padding: 12px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: lighter;
+}
+
+.nav-links li:hover {
+    background-color: #701fcc;
+    border-radius: 8px;
+    width: 100px;
+    align-items: center;
+    text-align: center;
+}
+
+.active {
+    background-color: #007bff;
+    width: 100px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/public/images/students-studying-together.jpg) no-repeat center center/cover;
     height: 100vh;
     display: flex;
@@ -18,16 +64,15 @@ body {
     color: white;
 }
 
-.header-content {
+.hero-content {
     max-width: 600px;
 }
 
 .logo {
-    max-width: 100px;
+    display: block;
+    max-width: 40px;
     border-radius: 50%;
-    position: absolute;
-    left: 0;
-    margin: 2px;
+    margin: 5px;
 }
 
 .hero-buttons {
@@ -48,57 +93,6 @@ body {
 
 .btn-register {
     background-color: #6c757d;
-}
-
-.header-section .navbar {
-    display: flex;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-.navbar .nav-links {
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-    position: absolute;
-    right: 0;
-    top: 0px;
-    margin: 0;
-    padding: 10px;
-    border-radius: 5px;
-    border-radius: 15px 0 15px 15px;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.nav-links li {
-    margin: 15px;
-    padding: 15px;
-}
-
-.nav-links i {
-    margin-right: 8px;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: white;
-    font-size: 17px;
-    font-weight: lighter;
-
-
-}
-.nav-links li:hover {
-    background-color: #701fcc;
-    border-radius: 8px;
-    width: 100px;
-    align-items: center;
-}
-
-.active {
-    background-color: #007bff;
-    width: 100px;
-    border-radius: 8px;
 }
 
 /* Features Section */

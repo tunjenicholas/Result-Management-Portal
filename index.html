@@ -3,34 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Result Slip Access Platform</title>
+    <title>Result slip portal</title>
     <link rel="stylesheet" href="SRC/styles/mystyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 <!-- Header Section -->
-<header class="header-section">
-    <nav class="navbar">
-        <div class="logo-container">
-            <a href="index.html" ><img src="public/images/RP-logo.png" alt="Result Portal Logo" class="logo"></a>
-        </div>
-        <ul class="nav-links">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="result.html">Results</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="register.html">Register</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-    </nav>
+<nav class="navbar">
+    <div class="logo-container">
+        <a href="index.html" ><img src="public/images/RP-logo.png" alt="Result Portal Logo" class="logo"></a>
+    </div>
+    <ul class="nav-links">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="/SRC/html/login/studentlogin.html">Login</a></li>
+        <li><a href="/SRC/html/contact.html">Contact Us</a></li>
+    </ul>
+</nav>
 
-    <div class="header-content">
+<section class="hero-section">
+    <div class="hero-content">
         <h1>Access Your Academic Results Instantly and Securely</h1>
-        <div class="header-buttons">
-            <a href="#" class="btn btn-login">Login</a>
-            <a href="#" class="btn btn-register">Sign Up</a>
+        <div class="hero-buttons">
+            <a href="/SRC/html/login/studentlogin.html" class="btn btn-login">Login</a>
         </div>
     </div>
-</header>
+</section>
 
 <!-- Main Content -->
 <main>
@@ -60,24 +57,19 @@
     <section class="role-access-section">
         <h2>Who Are You?</h2>
         <div class="role-grid">
-            <a href="/dashboard/student.html" class="role-card">
-
-                <!-- <img src="" alt=""> -->
+            <a href="/SRC/html/login/studentlogin.html" class="role-card">
                 <h3>Student</h3>
                 <p>View and download your results.</p>
             </a>
-            <a href="/dashboard/teacher.html" class="role-card">
-                <!-- <img src="" alt="">  -->
+            <a href="/SRC/html/login/teacherlogin.html" class="role-card">
                 <h3>Teacher</h3>
                 <p>Upload and manage student results.</p>
             </a>
-            <a href="/dashboard/admin.html" class="role-card">
-                <!-- <img src="" alt=""> -->
+            <a href="/SRC/html/login/adminlogin.html" class="role-card">
                 <h3>Administrator</h3>
                 <p>Oversee the entire result management process.</p>
             </a>
-            <a href="/dashboard/parent.html" class="role-card">
-                <!-- <img src="" alt=""> -->
+            <a href="/SRC/html/login/parentlogin.html" class="role-card">
                 <h3>Parent</h3>
                 <p>Check your child’s academic performance.</p>
             </a>
@@ -89,15 +81,12 @@
         <h2>How It Works</h2>
         <div class="steps-grid">
             <div class="step">
-                <!-- <img src="" alt=""> -->
-                <h3>Step 1: Register or Login</h3>
+                <h3>Step 1: Login</h3>
             </div>
             <div class="step">
-                <!-- <img src="" alt=""> -->
                 <h3>Step 2: View Your Results</h3>
             </div>
             <div class="step">
-                <!-- <img src="" alt=""> -->
                 <h3>Step 3: Download or Print</h3>
             </div>
         </div>
@@ -134,9 +123,8 @@
     <div class="footer-content">
         <p>&copy; 2024 Result Slip Access Platform. All Rights Reserved.</p>
         <ul>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <!-- <li><a href="#">Terms of Service</a></li> -->
+            <li><a href="/SRC/html/contact.html">Contact Us</a></li>
         </ul>
     </div>
 </footer>
