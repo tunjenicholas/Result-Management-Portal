@@ -209,11 +209,13 @@ body {
     margin: auto;
     border: 1px solid #f2f2f2;
     border-radius: 5px;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 3px rgba(202, 202, 202, 0.2), 0 0 5px rgba(202, 202, 202, 0.4);
 }
 .wrapper .contact-form-heading {
-    background-color: #f5f5f5;
-    color: black;
+    /* background-color: #f5f5f5; */
+    background: linear-gradient(#5885e4, #2a4395);
+
+    color: white;
     padding: 20px;
     font-size: 22px;
     text-align: center;
@@ -232,7 +234,7 @@ body {
     border: 1px solid #eeeeee;
     padding: 8px;
     border-radius: 7px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1), 0 0 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 4px rgba(202, 202, 202, 0.1), 0 0 2px rgba(202, 202, 202, 0.3);
     outline: none;
 }
 .contact-message-row {

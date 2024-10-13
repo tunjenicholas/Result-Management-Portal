@@ -2,10 +2,142 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>admin-dashboard</title>
-    <link rel="stylesheet" href="/SRC/styles/headerstyle.css">
+    <link rel="stylesheet" href="/SRC/styles/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+        <!-- Admin Dashboard -->
+<Section class="dashboard-container">
+    <!-- Dashboard Side-Bar nav -->
+    <aside class="dashboard-sidebar-container">
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="/public/images/RP-logo.png" alt="Result Portal">
+             </div>
+             <span class="logo_name">Result Portal</span>
+        </div>
+        <div class="menu-items">
+            <ul class="sidebar-items">
+                <li><a href="">
+                    <i class="fa-solid fa-grip title-icon"></i>
+                    <span>Dashboard Overview</span>
+                </a></li>
+                <li class="user-management dropdown-list-container">
+                    <div class="dropdown-title">
+                        <i class="fa-solid fa-users title-icon"></i>
+                        <span>User Management</span>
+                        <i class="fa-solid fa-caret-down dropdown-icon"></i>
+                    </div>
+                    <ul class="user-management-list">
+                        <li><a href="">View All Users</a></li>
+                        <li><a href="">Add New Users</a></li>
+                        <li><a href="">Edit|Update User Information</a></li>
+                        <li><a href="">Deactivate|Delete Users</a></li>
+                    </ul>
+                </li>
+                <li class="result-management dropdown-list-container">
+                    <div class="dropdown-title">
+                        <i class="fa-solid fa-file title-icon"></i>
+                        <span>Result Management</span>
+                        <i class="fa-solid fa-caret-down dropdown-icon"></i>
+                    </div>
+                    <ul class="user-management-list">
+                        <li><a href="">Upload Results</a></li>
+                        <li><a href="">Add|Update Results</a></li>
+                        <li><a href="">View Student Results</a></li>
+                        <li><a href="">Manage Results</a></li>
+                    </ul>
+                </li>
+                <li class="report-management dropdown-list-container">
+                    <div class="dropdown-title">
+                    <i class="fas fa-poll title-icon"></i>
+                    <!-- <i class="fa-solid fa-chart-line title-icon"></i> -->
+                        <span>Report & Analytics</span>
+                        <i class="fa-solid fa-caret-down dropdown-icon"></i>
+                    </div>
+                    <ul class="user-management-list">
+                        <li><a href="">Generate Reports</a></li>
+                        <li><a href="">Filter Results</a></li>
+                        <li><a href="">Download Reports</a></li>
+                    </ul>
+                </li>
+                <li class="communication-tool dropdown-list-container">
+                    <div class="dropdown-title">
+                        <i class="fa-solid fa-tty title-icon"></i>
+                        <span>Communication Tools</span>
+                        <i class="fa-solid fa-caret-down dropdown-icon"></i>
+                    </div>
+                    <ul class="user-management-list">
+                        <li><a href="">Send Notification</a></li>
+                        <li><a href="">Bulk Messaging</a></li>
+                    </ul>
+                </li>
+                <li class="support"><a href="">
+                    <i class="fa-solid fa-headset title-icon"></i>
+                    <span>Support</span>
+                </a></li>
+            </ul>   
+            <ul class="logout-mod">
+                <li><a href="#">
+                    <i class="fa-solid fa-arrow-right-from-bracket title-icon"></i>
+                    <span>Logout</span>
+                </a></li>
+            </ul>     
+        </div>
 
+    </aside>
+    <!-- End of Sidebar -->
+
+    <!-- main content -->
+    <section class="dashboard-main-content">
+        <div class="main-content-header">
+            <div class="profile">
+                <i class="fa-solid fa-list-ul sidebar-toggle"></i>
+                 <span class="admin-title">Admin Dashboard</span>
+                <p class="profile-pic"><i class="fa-solid fa-user"></i></p>
+            </div>
+            <div class="welcome-message">
+                <h2>Dashboard Overview</h2>
+                <p class="user-welcome-message">
+                    Welcome, Nicholas.
+                </p>
+            </div>
+        </div>
+
+        <div class="dashboard-overview">
+            <div class="row-1">
+                <div class="students-no dashboard-overview-items">
+                    <span class="label">Total Students</span>
+                    <span class="number">900</span>
+                </div> 
+                <div class="teacher-no dashboard-overview-items">
+                    <span class="label">Total Teachers</span>
+                    <span class="number">100</span>
+                </div>
+                <div class="parents-no dashboard-overview-items">
+                    <span class="label">Total Parents</span>
+                    <span class="number">900</span>
+                </div>
+            </div>
+            <div class="row-2">
+                <div class="results-uploaded dashboard-overview-items">
+                    <span class="label">Total Results Uploaded</span>
+                    <span class="number">40</span>
+                </div>
+                <div class="active-users dashboard-overview-items">
+                    <span class="label">Active Users-Weekly</span>
+                    <span class="number">400</span>
+                </div>
+            </div>
+        </div>
+           
+    </section>
+    <!-- End of main Content -->
+
+</Section>
+
+<script src="/SRC/scripts/script.js"></script>
 </body>
 </html>

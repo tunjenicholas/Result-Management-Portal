@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>student-dashboard</title>
     <link rel="stylesheet" href="/SRC/styles/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -11,31 +12,63 @@
 <Section class="dashboard-container">
     <!-- Dashboard Side-Bar nav -->
     <aside class="dashboard-sidebar-container">
-        <div class="dashboard-heading">
-            <h2>Student Dashboard</h2>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="/public/images/RP-logo.png" alt="Result Portal">
+             </div>
+             <span class="logo_name">Result Portal</span>
         </div>
-        <ul class="sidebar-items">
-            <li><a href="/SRC/html/result.html"><i class="fa-solid fa-square-poll-horizontal icon"></i>View Results</a></li>
-            <li><a href=""><i class="fa-solid fa-file-arrow-down icon"></i>Download Result Slip</a></li>
-            <li><a href=""><i class="fa-solid fa-print icon"></i>Print</a></li>
-            <li><a href=""><i class="fa-solid fa-clock-rotate-left icon"></i>View Academic History</a></li>
-            <li><a href=""><i class="fa-solid fa-bell icon"></i>Notification</a></li>
-            <!-- <li><a href=""><i class="fa-solid fa-gear icon"></i>Profile Management</a></li> -->
-        </ul>        
+        <div class="menu-items">
+            <ul class="sidebar-items">
+                <li><a href="/SRC/html/result.html">
+                    <i class="fa-solid fa-square-poll-horizontal title-icon"></i>
+                    <span>View Results</span>
+                </a></li>
+                <li><a href="">
+                    <i class="fa-solid fa-file-arrow-down title-icon"></i>
+                    <span>Download Result Slip</span>
+                </a></li>
+                <li><a href="">
+                    <i class="fa-solid fa-print title-icon"></i>
+                    <span>Print</span>
+                </a></li>
+                <li><a href="">
+                    <i class="fa-solid fa-clock-rotate-left title-icon"></i>
+                    <span>View Academic History</span>
+                </a></li>
+                <li><a href="">
+                    <i class="fa-solid fa-bell title-icon"></i>
+                    <span>Notification</span>
+                </a></li>
+                <!-- <li><a href=""><i class="fa-solid fa-gear icon"></i>Profile Management</a></li> -->
+            </ul>
+            <ul class="logout-mod">
+                <li><a href="#">
+                    <i class="fa-solid fa-arrow-right-from-bracket title-icon"></i>
+                    <span>Logout</span>
+                </a></li>
+            </ul>  
+        </div>
+        
     </aside>
-    <!-- main content -->
+
+    <!-- Dashboard main content -->
     <section class="dashboard-main-content">
-        <div class="profile">
-            <p class="toggle-btn"><i class="fa-solid fa-list-ul"></i></p>
-            <p class="profile-pic"><i class="fa-solid fa-user"></i></p>
+        <div class="main-content-header">
+            <div class="profile">
+                <i class="fa-solid fa-list-ul sidebar-toggle"></i>
+                <span class="admin-title">Student Dashboard</span>
+                <p class="profile-pic"><i class="fa-solid fa-user"></i></p>
+            </div>
+            <div class="welcome-message">
+                <h2>Personal Information</h2>
+                <p class="user-welcome-message">
+                    Welcome, Nicholas.
+                </p>
+            </div>
         </div>
-        <div class="welcome-message">
-            <h2>Personal Information</h2>
-            <p class="user-welcome-message">
-                Welcome, Nicholas.
-            </p>
-        </div>
-        <div class="main-content">
+
+        <div class="student-personal-details">
             <table>
                 <tr>
                     <th>Full Name: </th>
@@ -74,5 +107,6 @@
     </section>
 </Section>
 
+<script src="/SRC/scripts/script.js"></script>
 </body>
 </html>
