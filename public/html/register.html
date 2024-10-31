@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result-portal-registration</title>
+    <link rel="stylesheet" href="/public/styles/headerstyle.css">
+</head>
+<body>
+    <!-- Nav-bar at the top -->
+    <!-- <nav class="navbar">
+        <div class="logo-container">
+            <a href="/index.html"><img src="/public/images/RP-logo.png" alt="Result Portal Logo" class="logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/public/html/result.html">Results</a></li>
+            <li><a href="/public/html/login/studentlogin.html">Login</a></li>
+            <li class="active"><a href="/public/html/register.html">Register</a></li>
+            <li><a href="/public/html/contact.html">Contact Us</a></li>
+        </ul>
+    </nav>  -->
+
+    <section class="add-student-container">
+        <div class="content-wrapper">
+            <h1>Add Student</h1>
+            <form action="/register" method="POST">
+                <div class="student-details">
+                    <div class="label">
+                        <label for="student-name">Student Name:</label>
+                    </div>
+                    <div class="input-item">
+                        <span><input type="text" id="firstname" name="firstname" placeholder="First name" required></span>
+                        <span><input type="text" id="lastname" name="lastname" placeholder="Last name" required></span>
+                    </div>
+                </div>
+                <div class="student-details">
+                    <div class="label">
+                        <label for="student-DOB">Date of Birth:</label>
+                    </div>
+                    <div class="input-item">
+                        <span><input type="date" id="student-DOB" name="dateOfBirth" required></span>
+                    </div>
+                </div>
+                <div class="student-details">
+                    <div class="label">
+                        <label for="student-gender-title">Gender:</label>
+                    </div>
+                    <div class="input-item gender-items">
+                        <label for="gender-male">Male</label>
+                        <span><input type="radio" id="gender-male" name="student-gender" value="male"></span>
+                        <label for="gender-female">Female</label>
+                        <span><input type="radio" id="gender-female" name="student-gender" value="female"></span>
+                        <label for="gender-other">Other</label>
+                        <span><input type="radio" id="gender-other" name="student-gender" value="other"></span>
+                    </div>
+                </div>
+                <div class="student-details">
+                    <div class="label">
+                        <label for="student-name">School Details:</label>
+                    </div>
+                    <div class="input-item">
+                        <span>
+                            <select name="student-class" id="class-option">
+                                <option value="">Select Class</option>
+                                <optgroup label="FORM 1">
+                                    <option value=" 1 red">1 Red</option>
+                                    <option value="1 yellow">1 Yellow</option>
+                                    <option value="1 green">1 Green</option>
+                                    <option value="1 blue">1 Blue</option>
+                                </optgroup>
+                                <optgroup label="FORM 2">
+                                    <option value=" 2 red">2 Red</option>
+                                    <option value="2 yellow">2 Yellow</option>
+                                    <option value="2 green">2 Green</option>
+                                    <option value="2 blue">2 Blue</option>
+                                </optgroup>
+                                <optgroup label="FORM 2">
+                                    <option value=" 3 red">3 Red</option>
+                                    <option value="3 yellow">3 Yellow</option>
+                                    <option value="3 green">3 Green</option>
+                                    <option value="3 blue">3 Blue</option>
+                                </optgroup>
+                                <optgroup label="FORM 2">
+                                    <option value="4 red">4 Red</option>
+                                    <option value="4 yellow">4 Yellow</option>
+                                    <option value="4 green">4 Green</option>
+                                    <option value="4 blue">4 Blue</option>
+                                </optgroup>
+
+                            </select>
+                        </span>
+                        <span><input type="text" id="adm-no" name="adm_no" placeholder="Adm No." required></span>
+                    </div>
+                </div>
+                <div class="student-details">
+                    <div class="label">
+                        <label for="student-name">Parents Contacts:</label>
+                    </div>
+                    <div class="input-item">
+                        <span><input type="email" id="parent-email-address" name="email" placeholder="Email Address" required></span>
+                        <span><input type="tel" id="parent-phone-no" name="phone-no" placeholder="Phone Number" required></span>
+                    </div>
+                </div>
+                <div class="add-student-submit-btn">
+                    <input type="submit" value="Submit" >
+                </div>
+            </form>
+        </div>
+
+    </section>
+
+</body>
+</html>
