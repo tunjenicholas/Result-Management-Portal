@@ -1,28 +1,34 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const userRole = localStorage.getItem("userRole"); 
-    const username = localStorage.getItem("username");
+// public/scripts/dashboard.js
+async function fetchUserData() {
+    const token = localStorage.getItem('token'); 
 
-    document.getElementById("username").textContent = username || "User";
-    document.getElementById("user-role").textContent = userRole || "Role";
+    try {
+        const response = await fetch('/api/user/data', {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            }
+        });
 
-    const uploadReportSection = document.getElementById("upload-report-section");
-    const viewReportSection = document.getElementById("view-report-section");
-    const analyticsSection = document.getElementById("analytics-section");
-
-    if (userRole === "admin" || userRole === "teacher") {
-        uploadReportSection.style.display = "block";
+        if (response.ok) {
+            const data = await response.json();
+            console.log('User data:', data);
+        } else {
+            throw new Error('Failed to fetch user data');
+        }
+    } catch (error) {
+        console.error('Error fetching user data:', error);
     }
-
-    if (userRole === "student" || userRole === "parent") {
-        viewReportSection.style.display = "block";
-    }
-
-    if (userRole === "admin") {
-        analyticsSection.style.display = "block";
-    }
-});
-
-function logout() {
-    localStorage.clear();
-    window.location.href = "/SRC/html/login/studentlogin.html";  // Adjust path to the login page
 }
+
+// Call fetchUserData when the dashboard loads
+document.addEventListener('DOMContentLoaded', fetchUserData);
+
+
+
+// logout 
+document.getElementById('logout-btn').addEventListener('click', () => {
+    localStorage.removeItem('token');
+    window.location.href = '/public/html/login/studentlogin.html';
+});

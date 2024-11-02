@@ -1,43 +1,29 @@
-require('dotenv').config();
 const express = require('express');
-const mysql = require('mysql2');
 const bodyParser = require('body-parser');
 const app = express();
-// const bcrypt = require('bcryptjs');
-// const jwt = require('jsonwebtoken');
-// const db = require('./db');
-// app.use(express.json());
+const cors = require('cors');
+require('dotenv').config();
 
 
 // middleware
 app.use(bodyParser.json());
+app.use(cors({ origin: 'http://127.0.0.1:5500' }));
 
-// Database Connection
-const db = mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
-});
 
-db.connect((err) => {
-    if (err) throw err;
-    console.log('Database connected...');
-});
 
 // Importing Routes
 const authRoutes = require('./routes/authRoutes');
 const dashboardRoutes = require('./routes/dashboardRoutes');
 const resultRoutes = require('./routes/resultRoutes');
-// const authRoutes = require('./routes/authRoutes');
+const notificationRoutes = require('./routes/notificationRoutes');
+
 
 
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/results', resultRoutes);
-// app.use('/api/auth', authRoutes);
-
+app.use('/api/notifications', notificationRoutes);
 
 
 
@@ -46,6 +32,19 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 
+
+// Database Connection
+// const db = mysql.createConnection({
+    //     host: process.env.DB_HOST,
+    //     user: process.env.DB_USER,
+    //     password: process.env.DB_PASSWORD,
+    //     database: process.env.DB_NAME
+    // });
+    
+    // db.connect((err) => {
+    //     if (err) throw err;
+    //     console.log('Database connected...');
+    // });
 // // Add Result (Admin or Teacher only)
 // app.post('/results', (req, res) => {
 //     const { student_id, subject_id, year, term, marks } = req.body;

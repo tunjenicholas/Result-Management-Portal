@@ -32,7 +32,7 @@
         </ul>
     </div>
 
-    <form id="student-login-form" class="student-login-form" action="/login/student" method="POST">
+    <form id="student-login-form" class="student-login-form">
         <div class="form-heading">
             <h3>Login As Student</h3>
         </div>
@@ -43,7 +43,7 @@
             </div>
 
             <div class="column-2">
-                <input type="email" placeholder="username" name="username" id="username" required>
+                <input type="text" placeholder="username" name="username" id="username" required>
             </div>
         </div>
 
@@ -58,7 +58,7 @@
         </div>
 
         <div class="submit-btn">
-            <input type="submit" value="Login">
+            <input type="submit" value="Login" id="submit">
         </div>
 
         <div id="student-error-message" class="error-message"></div>
@@ -73,6 +73,10 @@
         </div>
     </form>
 </div>
+
+<script src="/public/scripts/studentlogin.js">
+</script><script src="/public/scripts/dashboard.js"></script>
+
 </body>
 </html>
 

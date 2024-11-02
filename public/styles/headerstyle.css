@@ -206,7 +206,7 @@ body {
     width: 80%
 }
 
-.student-login-form input[type=email], input[type=password] {
+.student-login-form input[type=text], input[type=password] {
     border: 1px solid #eeeeee;
     padding: 10px;
     border-radius: 20px;
