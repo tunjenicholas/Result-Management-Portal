@@ -14,7 +14,11 @@ const {
 router.get('/', authenticateToken, authorizeRole('admin'), getAllResults);
 
 // Route to get results by admission number (accessible by student, parent, admin, and teacher)
-router.get('/student/:admission_number', authenticateToken, authorizeRole('student', 'parent', 'admin', 'teacher'), getResultsByAdmissionNumber);
+// Result Management Route (updated for correct route)
+router.get('/student/:admission_number', authenticateToken, authorizeRole
+    ('student', 'parent', 'admin', 'teacher'), 
+    getResultsByAdmissionNumber);
+
 
 // Route to add a new result (admin and teacher only)
 router.post('/', authenticateToken, authorizeRole('admin', 'teacher'), addResults);

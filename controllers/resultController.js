@@ -14,15 +14,37 @@ exports.getAllResults = async (req, res) => {
 };
 
 // Retrieve results by admission number
+// Retrieve results by admission number with student details
 exports.getResultsByAdmissionNumber = async (req, res) => {
     const { admission_number } = req.params;
 
     try {
+        // Query to fetch results along with student name, class, and form
         const [results] = await db.execute(
-            'SELECT * FROM results WHERE admission_number = ?',
+            `SELECT r.subject, r.marks, r.grade, r.points, r.term, r.year,
+                    u.name AS student_name,
+                    s.class AS student_class, s.stream AS student_stream
+               FROM results r
+               JOIN users u ON r.admission_number = u.admission_number
+               LEFT JOIN students s ON r.admission_number = s.admission_number
+              WHERE r.admission_number = ?`,
             [admission_number]
         );
-        res.status(200).json(results);
+
+        if (results.length === 0) {
+            return res.status(404).json({ message: 'No results found for this admission number.' });
+        }
+
+        // Assuming all results have the same student name/class/form
+        const { student_name, student_class, student_stream } = results[0];
+        
+        res.status(200).json({
+            student_name,
+            admission_number,
+            student_class,
+            student_stream,
+            results
+        });
     } catch (error) {
         res.status(500).json({ message: 'Error retrieving results', error });
     }
