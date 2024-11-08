@@ -339,4 +339,18 @@
     font-size: 80px;
 }
 
+/* Smooth transitions for showing the search form */
+#search-results-section {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+#search-results-section[style*="display: block;"] {
+    opacity: 1;
+}
+
+/* ////////////////////////////// */
+
+
+
 

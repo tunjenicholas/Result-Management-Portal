@@ -1,25 +1,19 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../config/db');
+const {
+    createNotification,
+    getNotifications,
+    deleteNotification
+} = require('../controllers/notificationController');
 const { authenticateToken, authorizeRole } = require('../middlewares/authMiddleware');
-const { sendEmailNotification } = require('../notificationService');
 
-// Admin sends general school update
-router.post('/sendUpdate', authenticateToken, authorizeRole('admin'), async (req, res) => {
-    const { message } = req.body;
+// Create a new notification (admin only)
+router.post('/', authenticateToken, authorizeRole('admin'), createNotification);
 
-    try {
-        const [parents] = await db.query(`SELECT email FROM Users WHERE role = 'parent'`);
+// Get all notifications (for admin, teachers, and parents)
+router.get('/', authenticateToken, authorizeRole('admin', 'teacher', 'parent'), getNotifications);
 
-        await Promise.all(parents.map(async (parent) => {
-            await sendEmailNotification(parent.email, 'School Update', message);
-        }));
-
-        res.status(200).json({ message: 'School update sent successfully' });
-    } catch (error) {
-        console.error('Error sending school update:', error);
-        res.status(500).json({ error: 'Failed to send school update' });
-    }
-});
+// Delete a notification (admin only)
+router.delete('/:id', authenticateToken, authorizeRole('admin'), deleteNotification);
 
 module.exports = router;
